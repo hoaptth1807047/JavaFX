@@ -120,7 +120,6 @@ public class RegisterStage extends Stage {
         this.vBox.setSpacing(10);
         this.vBox.getChildren().addAll(this.titleBox, this.gridPane);
 
-//        this.loginStage = new LoginStage(main);
         this.btnSignUp.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {

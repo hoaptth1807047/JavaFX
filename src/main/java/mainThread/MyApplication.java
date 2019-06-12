@@ -23,10 +23,10 @@ public class MyApplication extends Application {
     private String accountName = "";
     private int accountBalance;
 
-    private VBox vBox; // bao ngoài cả 3 phần header, body, footer.
-    private HBox titleBox; // header chứa logo - text.
-    private GridPane gridPaneContent; // body chứa thông tin tài khoản.
-    private HBox btnBox; // footer chứa các button.
+    private VBox vBox;
+    private HBox titleBox;
+    private GridPane gridPaneContent;
+    private HBox btnBox;
 
     private Label lblTitle;
     private Label lblAccount;
@@ -52,7 +52,6 @@ public class MyApplication extends Application {
         this.mainStage = primaryStage;
         initComponent();
         if (isLoggedIn) {
-            // show stage.
             this.mainStage.show();
         } else {
             this.loginStage = new LoginStage(this);
@@ -61,9 +60,8 @@ public class MyApplication extends Application {
     }
 
     private void initComponent() {
-        this.vBox = new VBox(); // layout
+        this.vBox = new VBox();
 
-        // xử lý phần header, logo.
         this.titleBox = new HBox();
         this.lblTitle = new Label("Spring Hero Bank");
         this.lblTitle.setFont(Font.font(17));
@@ -72,7 +70,6 @@ public class MyApplication extends Application {
         this.titleBox.setAlignment(Pos.TOP_LEFT);
         this.titleBox.setSpacing(10);
 
-        // xử lý phần body content.
         this.gridPaneContent = new GridPane();
         this.lblAccount = new Label("Account:");
         this.lblBalance = new Label("Balance:");
@@ -87,7 +84,6 @@ public class MyApplication extends Application {
         this.gridPaneContent.setVgap(10);
         this.gridPaneContent.setHgap(10);
 
-        // xử lý phần footer button.
         this.btnBox = new HBox();
         this.btnWithdraw = new Button("Withdraw");
         this.btnDeposit = new Button("Deposit");
