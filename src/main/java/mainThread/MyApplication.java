@@ -20,8 +20,8 @@ import views.TransactionStage;
 
 public class MyApplication extends Application {
 
-    private String accountName = "";
-    private int accountBalance;
+    private String accountName = "thanhhoa123";
+    private int accountBalance = 21062000;
 
     private VBox vBox;
     private HBox titleBox;
@@ -296,6 +296,9 @@ public class MyApplication extends Application {
 
     public static boolean isIsLoggedIn() {
         return isLoggedIn;
+    }
+
+    public MyApplication() {
     }
 
     public static void setIsLoggedIn(boolean isLoggedIn) {
